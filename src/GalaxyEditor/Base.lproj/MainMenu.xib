@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="GalaxyEditor" id="56">
+                    <menu key="submenu" title="GalaxyEditor" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About GalaxyEditor" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129"/>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide GalaxyEditor" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit GalaxyEditor" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="19">
+                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="537">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="538"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="239">
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="240"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="92">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Bring All to Front" id="5">
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="39"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="490">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="491">
+                        <items>
+                            <menuItem title="GalaxyEditor Help" keyEquivalent="?" id="492">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="493"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="GalaxyEditor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <rect key="contentRect" x="0.0" y="0.0" width="800" height="600"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" translatesAutoresizingMaskIntoConstraints="NO" id="tj8-z9-mwc">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <subviews>
+                            <customView id="WBv-JO-nan">
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ckM-H9-pqk">
+                                        <rect key="frame" x="688" y="3" width="80" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Export" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OoL-oR-NpG">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="exportButtonClick:" target="494" id="JnM-V2-612"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-Qh-am0">
+                                        <rect key="frame" x="608" y="3" width="80" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Import" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="26b-eK-jmX">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="importButtonClick:" target="494" id="T1R-gD-Dec"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vb4-Xn-O32">
+                                        <rect key="frame" x="107" y="3" width="114" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Color Picker" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fkx-kM-uul">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="colorPicker:" target="494" id="Gy6-eM-3ZC"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="yaJ-Th-S1D">
+                                        <rect key="frame" x="18" y="11" width="89" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="haM-RZ-Q6A"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="check" title="Show Grid" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="kQi-xO-ZND">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="changeGridValue:" target="494" id="xTm-Qp-aOc"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zd9-6n-pKa">
+                                        <rect key="frame" x="536" y="3" width="72" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P4X-TS-nFj">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="clearButtonClick:" target="494" id="Z20-Do-tbq"/>
+                                        </connections>
+                                    </button>
+                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iZv-eN-K8B">
+                                        <rect key="frame" x="772" y="7" width="25" height="25"/>
+                                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0wq-jg-no2">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showHelp:" target="494" id="4Bj-bW-YH7"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EY0-8Q-o8Q">
+                                        <rect key="frame" x="405" y="3" width="131" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Load GEObject" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wKV-3b-G80">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="loadInGameButton:" target="494" id="9f7-dN-xUu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4T4-Qh-am0" firstAttribute="baseline" secondItem="ckM-H9-pqk" secondAttribute="baseline" id="23v-KK-XSE"/>
+                                    <constraint firstItem="Vb4-Xn-O32" firstAttribute="baseline" secondItem="EY0-8Q-o8Q" secondAttribute="baseline" id="2Hc-rB-oIe"/>
+                                    <constraint firstItem="ckM-H9-pqk" firstAttribute="top" secondItem="iZv-eN-K8B" secondAttribute="top" id="3QC-1y-c0U"/>
+                                    <constraint firstItem="4T4-Qh-am0" firstAttribute="leading" secondItem="Zd9-6n-pKa" secondAttribute="trailing" constant="12" symbolic="YES" id="5h5-h3-7C7"/>
+                                    <constraint firstItem="EY0-8Q-o8Q" firstAttribute="baseline" secondItem="Zd9-6n-pKa" secondAttribute="baseline" id="BNJ-Uh-mqI"/>
+                                    <constraint firstItem="yaJ-Th-S1D" firstAttribute="centerY" secondItem="Vb4-Xn-O32" secondAttribute="centerY" id="HI8-Td-TRz"/>
+                                    <constraint firstItem="Vb4-Xn-O32" firstAttribute="leading" secondItem="yaJ-Th-S1D" secondAttribute="trailing" constant="8" symbolic="YES" id="HvT-sh-gD5"/>
+                                    <constraint firstItem="iZv-eN-K8B" firstAttribute="leading" secondItem="ckM-H9-pqk" secondAttribute="trailing" constant="12" symbolic="YES" id="MkE-fE-ja5"/>
+                                    <constraint firstItem="Zd9-6n-pKa" firstAttribute="baseline" secondItem="4T4-Qh-am0" secondAttribute="baseline" id="QSz-pG-dnq"/>
+                                    <constraint firstItem="Zd9-6n-pKa" firstAttribute="leading" secondItem="EY0-8Q-o8Q" secondAttribute="trailing" constant="12" symbolic="YES" id="QpL-jc-4be"/>
+                                    <constraint firstItem="yaJ-Th-S1D" firstAttribute="leading" secondItem="WBv-JO-nan" secondAttribute="leading" constant="20" symbolic="YES" id="VrJ-s1-vf3"/>
+                                    <constraint firstAttribute="trailing" secondItem="iZv-eN-K8B" secondAttribute="trailing" constant="5" id="fnx-kt-eVW"/>
+                                    <constraint firstItem="yaJ-Th-S1D" firstAttribute="centerY" secondItem="WBv-JO-nan" secondAttribute="centerY" id="j9E-Sr-KZJ"/>
+                                    <constraint firstItem="ckM-H9-pqk" firstAttribute="leading" secondItem="4T4-Qh-am0" secondAttribute="trailing" constant="12" symbolic="YES" id="qw3-eP-pBz"/>
+                                </constraints>
+                            </customView>
+                            <customView id="539" customClass="SKView">
+                                <rect key="frame" x="0.0" y="50" width="800" height="550"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="hfh-jg-UIB" customClass="DroppableView" customModule="GalaxyEditor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="800" height="550"/>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hfh-jg-UIB" secondAttribute="trailing" id="epu-dU-Blr"/>
+                                    <constraint firstItem="hfh-jg-UIB" firstAttribute="leading" secondItem="539" secondAttribute="leading" id="lc2-Vg-A48"/>
+                                    <constraint firstItem="hfh-jg-UIB" firstAttribute="top" secondItem="539" secondAttribute="top" id="ssq-c7-rol"/>
+                                    <constraint firstAttribute="bottom" secondItem="hfh-jg-UIB" secondAttribute="bottom" id="z23-kL-jBW"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tj8-z9-mwc" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="2bB-A8-PSy"/>
+                    <constraint firstAttribute="trailing" secondItem="tj8-z9-mwc" secondAttribute="trailing" id="WhR-jd-7zQ"/>
+                    <constraint firstAttribute="bottom" secondItem="tj8-z9-mwc" secondAttribute="bottom" id="XM6-FM-G0M"/>
+                    <constraint firstItem="tj8-z9-mwc" firstAttribute="top" secondItem="372" secondAttribute="top" id="ytg-XB-jYe"/>
+                </constraints>
+            </view>
+        </window>
+        <customObject id="494" customClass="AppDelegate" customModule="GalaxyEditor" customModuleProvider="target">
+            <connections>
+                <outlet property="checkGrid" destination="yaJ-Th-S1D" id="gSg-I7-Pyz"/>
+                <outlet property="exportButton" destination="ckM-H9-pqk" id="xYH-Cc-eR7"/>
+                <outlet property="helpWindow" destination="6zD-bf-2RC" id="UwS-Wz-IO6"/>
+                <outlet property="skView" destination="539" id="540"/>
+                <outlet property="textField1" destination="fAS-ho-nDE" id="BKp-AT-vyf"/>
+                <outlet property="textField2" destination="8HP-6z-Pve" id="kWm-Ed-e11"/>
+                <outlet property="viewDroppable" destination="hfh-jg-UIB" id="qzp-vc-YXV"/>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <userDefaultsController representsSharedInstance="YES" id="nzg-sv-AJy"/>
+        <window title="Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="6zD-bf-2RC">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="75" y="103" width="452" height="269"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="8FR-wD-y4h">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="269"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4q-FZ-biS">
+                        <rect key="frame" x="17" y="141" width="125" height="111"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="draw" id="PN6-Ng-TrY"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6P-wO-DEz">
+                        <rect key="frame" x="148" y="220" width="214" height="29"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Galaxy Editor" id="Gy1-dC-7dj">
+                            <font key="font" metaFont="system" size="24"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0c-Zy-viF">
+                        <rect key="frame" x="148" y="198" width="258" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Shortcuts" allowsEditingTextAttributes="YES" id="3xx-q3-R1V">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="GbB-I2-huA">
+                        <rect key="frame" x="150" y="187" width="282" height="5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </box>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxb-9p-6f7">
+                        <rect key="frame" x="148" y="164" width="123" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="R + Left click" allowsEditingTextAttributes="YES" id="bc7-3g-BnO">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-L5-FYM">
+                        <rect key="frame" x="290" y="164" width="144" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Reference Node Select" allowsEditingTextAttributes="YES" id="ZE3-3d-ChY">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPf-G5-28a">
+                        <rect key="frame" x="354" y="141" width="80" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Delete Node" allowsEditingTextAttributes="YES" id="edB-ig-OSf">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pro-Dm-hd7">
+                        <rect key="frame" x="148" y="141" width="123" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="D + Left click" allowsEditingTextAttributes="YES" id="H2K-oc-YW1">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCg-mr-iRQ">
+                        <rect key="frame" x="148" y="116" width="123" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Left click" allowsEditingTextAttributes="YES" id="qMH-Eg-rS7">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="smo-zl-kFr">
+                        <rect key="frame" x="275" y="116" width="5" height="74"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </box>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSg-7r-211">
+                        <rect key="frame" x="369" y="116" width="65" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Add Node" allowsEditingTextAttributes="YES" id="EtH-IO-byg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGT-R2-CDm">
+                        <rect key="frame" x="18" y="20" width="416" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Copyright © 2015-2017. P'application Studio. All rights reserved." id="85Y-ox-cIV">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HP-6z-Pve">
+                        <rect key="frame" x="18" y="45" width="416" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="https://github.com/opapp6/Swift-AI" id="Sfp-Tq-UeA">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAS-ho-nDE">
+                        <rect key="frame" x="18" y="70" width="416" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="https://papplication.tumblr.com" allowsEditingTextAttributes="YES" id="v5g-Nq-lK7">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="722" y="323.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="draw" width="376.16326904296875" height="376.16326904296875"/>
+    </resources>
+</document>
