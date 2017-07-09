@@ -1,12 +1,12 @@
 # Galaxy Editor
 ![alt text](https://raw.githubusercontent.com/papplication/galaxy-editor/master/assets/example.gif "GE iOS simulation")
 
-##Summary
+## Summary
 
 A simple tool to create pixelated objects with unique physics. It provides a protocol which can handle these specific objects in your own iOS app. The app written in Swift for OSX.
 
 ![alt text](https://raw.githubusercontent.com/papplication/galaxy-editor/master/assets/GEimage.png "GE app image")
-##Features
+## Features
 
 * GEObject simulation
 * Reference node selector
@@ -16,13 +16,13 @@ A simple tool to create pixelated objects with unique physics. It provides a pro
 * Color picker
 * Help
 
-##Examples
+## Examples
 According to the GEExampleApp you can find a reference implementation. There is a simple test enverionment too where you can try the physics simulation in real time. The example app written in Swift for iOS.
 
-##Usage
+## Usage
 Draw something, then copy the **common** directory into your project. Put your GEObject into the SKScene.
 
-###GEObject
+### GEObject
 Main object which represents a single node. There are two parameters for initialization, a file path and a boolean value for simulation.
 	
 ```
@@ -68,7 +68,7 @@ GEObject format:
 }
 ```
 
-###GEOPhysics
+### GEOPhysics
 Modify your SKScene like this:
 	
 ```
@@ -78,14 +78,14 @@ func didBeginContact(contact: SKPhysicsContact) {
 ```
 GEObject contact category is **GEObjectCategory**, if you want to interacting whith them use **ContactTestCategory** in other SKSpriteNode.
 
-###Limitations
+### Limitations
 The current implementation performance depends on node count. The performance issues appeared when numerous children nodes were added (approximately 3-400/parent), as a consequence the fps dropped significantly. Keep the number of child nodes as low as you can.
 
-##Changelog
+## Changelog
 ###Version 1.1
 * Example iOS app added - tested on iPhone 6
 
-##About
+## About
 **P'application Studio** 	- http://papplication.tumblr.com
 
 **Twitter**					- https://twitter.com/P_application
