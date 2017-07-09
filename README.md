@@ -1,11 +1,11 @@
 # Galaxy Editor
-![alt text](https://raw.githubusercontent.com/opapp6/Galaxy-Editor/master/assets/example.gif "GE iOS simulation")
+![alt text](https://raw.githubusercontent.com/papplication/galaxy-editor/master/assets/example.gif "GE iOS simulation")
 
 ##Summary
 
 A simple tool to create pixelated objects with unique physics. It provides a protocol which can handle these specific objects in your own iOS app. The app written in Swift for OSX.
 
-![alt text](https://raw.githubusercontent.com/opapp6/Galaxy-Editor/master/assets/GEimage.png "GE app image")
+![alt text](https://raw.githubusercontent.com/papplication/galaxy-editor/master/assets/GEimage.png "GE app image")
 ##Features
 
 * GEObject simulation
