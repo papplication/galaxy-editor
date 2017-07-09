@@ -82,7 +82,7 @@ GEObject contact category is **GEObjectCategory**, if you want to interacting wh
 The current implementation performance depends on node count. The performance issues appeared when numerous children nodes were added (approximately 3-400/parent), as a consequence the fps dropped significantly. Keep the number of child nodes as low as you can.
 
 ## Changelog
-###Version 1.1
+### Version 1.1
 * Example iOS app added - tested on iPhone 6
 
 ## About
