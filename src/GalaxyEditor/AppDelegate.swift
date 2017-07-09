@@ -120,7 +120,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
             textField2.allowsEditingTextAttributes = true
             textField2.isSelectable = true
-            linkString = "https://github.com/opapp6/Galaxy-Editor"
+            linkString = "https://github.com/papplication/galaxy-editor"
             string = NSMutableAttributedString(string: linkString)
 
             string.beginEditing()
